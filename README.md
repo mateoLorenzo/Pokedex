@@ -2,7 +2,7 @@
 This pokedex is a web application where user can find all kind of pokemons, of any generation and types, being able to search and see pokemons details.
 
 ## Getting Started  🚀
-####Frontend
+#### Frontend
 
 1. In your favorite terminal, navigate to /frontend
 
@@ -23,7 +23,7 @@ npm start
 ------------
 
 
-####Backend
+#### Backend
 
 1. In your favorite terminal, navigate to /backend
 2. Make sure to install required dependencies running:
