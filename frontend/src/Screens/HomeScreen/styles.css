@@ -1,0 +1,165 @@
+.homeScreenContainer {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.mainScreenLoaderContainer {
+   width: 100%;
+   height: 100vh;
+   background-color: rgba(0, 0, 0, 0.452);
+   position: absolute;
+   z-index: 4;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.mainHomeLoader {
+   border: 7.5px solid #f3f3f3;
+   border-top: 7.5px solid black;
+   border-radius: 50%;
+   width: 40px;
+   height: 40px;
+   -webkit-animation: spin 2s linear infinite;
+   animation: spin .50s linear infinite;
+}
+
+.pokemonLogo {
+   width: 200px;
+   position: absolute;
+   left: 50px;
+   top: 20px;
+   cursor: pointer;
+}
+
+.homeSearchContainer {
+   margin-top: 10vh;
+   display: flex;
+   align-items: flex-end;
+   margin-bottom: 3vh;
+}
+
+
+.homeScreenSubContainer {
+   width: 90%;
+   height: 79vh;
+   overflow-y: scroll;
+   display: flex;
+   flex-direction: column;
+}
+
+.noPokemonsFoundMessageContainer {
+   flex: 1;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.noPokemonsFoundMessageSubContainer {
+   width: 45vw;
+   height: 50vh;
+   border-radius: 30px;
+   background: linear-gradient(97.35deg, rgba(255, 255, 255, 0.06) 17.74%, rgba(255, 255, 255, 0.1) 87.41%);
+   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
+   backdrop-filter: blur(40px);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.noPokemonsFoundImage {
+   width: 300px;
+}
+
+.noPokemonsFoundMessageTitle {
+   font-weight: 600;
+   font-size: 30px;
+   margin-top: 20px;
+   margin-bottom: 15px;
+}
+
+.noPokemonsFoundMessage {
+   color: #A9A9A9;
+   font-size: 18px;
+   text-align: center;
+   line-height: 12px;
+   margin-bottom: 10px;
+}
+
+.pokemonCardsContainer {
+   display: flex;
+   flex-wrap: wrap;
+   padding-bottom: 3vh;
+}
+
+.loadMorePokemonsButton {
+   background-color: black;
+   align-self: center;
+   padding: 15px 0px;
+   width: 150px;
+   height: 90px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: all .2s ease;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 40px;
+}
+
+.loadMorePokemonsButton:hover {
+   width: 170px
+}
+
+.loadMorePokemonsButtonText {
+   font-size: 17px;
+   font-weight: 500;
+   height: 30px;
+   display: flex;
+   align-items: center;
+}
+
+.fakePokemonCard {
+   width: 200px;
+   height: 200px;
+   background-color: black;
+   border-radius: 10px;
+   margin: 0 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.spinner {
+   border: 7.5px solid #f3f3f3;
+   border-top: 7.5px solid black;
+   border-radius: 50%;
+   width: 15px;
+   height: 15px;
+   -webkit-animation: spin 2s linear infinite;
+   animation: spin .35s linear infinite;
+}
+
+@-webkit-keyframes spin {
+   0% {
+      -webkit-transform: rotate(0deg);
+   }
+
+   100% {
+      -webkit-transform: rotate(360deg);
+   }
+}
+
+@keyframes spin {
+   0% {
+      transform: rotate(0deg);
+   }
+
+   100% {
+      transform: rotate(360deg);
+   }
+}
