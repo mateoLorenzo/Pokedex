@@ -1,6 +1,6 @@
-import HomeScreen from './Screens/HomeScreen/index';
-import { BrowserRouter, Route, Switch, } from 'react-router-dom';
-import PokemonDetailScreen from './Screens/DetailScreen/index';
+import HomeScreen from "./Screens/HomeScreen/index";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import PokemonDetailScreen from "./Screens/DetailScreen/index";
 
 const App = () => {
   return (
@@ -17,6 +17,6 @@ const App = () => {
         </Route>
       </Switch>
     </BrowserRouter>
-  )
-}
-export default App
+  );
+};
+export default App;
