@@ -38,6 +38,7 @@ const PokemonCard = ({ pokemonQuickViewDetails }: IPokemonCardProps) => {
                   })`
             }}
             className='pokemonCardImage'
+            data-testid="pokemon-card-image"
          />
          <div
             className='pokemonCardSubContainer'
@@ -47,12 +48,21 @@ const PokemonCard = ({ pokemonQuickViewDetails }: IPokemonCardProps) => {
                   { pokemonQuickViewDetails }
                )
             }}
+            data-testid="pokemon-card-sub-container"
          >
-            <div className='pokemonCard-DivisorLine' />
+            <div className='pokemonCard-DivisorLine' data-testid="pokemon-card-divisor-line" />
             <div className="pokemonCard-InfoContainer">
-               <img src={transparentPokeball} alt="transparent-pokeball" className="pokeballImage" />
+               <img
+                  src={transparentPokeball}
+                  alt="left-transparent-pokeball"
+                  className="pokeballImage"
+               />
                <p className='pokemonName'>{pokemonQuickViewDetails.name}</p>
-               <img src={transparentPokeball} alt="transparent-pokeball" className="pokeballImage" />
+               <img
+                  src={transparentPokeball}
+                  alt="right-transparent-pokeball"
+                  className="pokeballImage"
+               />
             </div>
             <div className='quickViewButtonContainer'
             >

@@ -72,6 +72,7 @@ const CustomSearch = ({
             onClick={(event) => onSearch(event)}
             data-tip
             data-for="buttonTooltip"
+            data-testid="search-button"
          >
             <ReactTooltip
                id="buttonTooltip"
@@ -83,7 +84,7 @@ const CustomSearch = ({
             >Type something!</ReactTooltip>
             {loading
                ? <div className="searchSpinner"></div>
-               : <SearchIcon className="searchIcon" />
+               : <SearchIcon data-testid="search-icon" className="searchIcon" />
             }
          </button>
       </form >
