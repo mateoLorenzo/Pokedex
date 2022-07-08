@@ -145,7 +145,7 @@
 
 .pokemonPropertyBlockContainer {
   flex: 1;
-  width: 70%;
+  width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -159,13 +159,13 @@
 }
 
 .pokemonDetailProperty {
-  font-size: 25px;
-  font-weight: 600;
+  font-size: 30px;
+  font-weight: 700;
 }
 
 .pokemonDetailValue {
-  font-weight: 700;
-  font-size: 40px;
+  font-size: 25px;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 1800px) {

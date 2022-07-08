@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 30px 30px 0 0;
+  border-radius: 20px 20px 0 0;
   position: relative;
   background-color: #0000003f;
 }
@@ -15,7 +15,7 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  width: 15vw;
+  width: 75%;
   height: 30vh;
   position: absolute;
   top: -80px;
@@ -63,13 +63,10 @@
   font-weight: 500;
   font-weight: 700;
   font-size: 25px;
+  width: 65%;
 
   overflow: hidden;
   text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  line-clamp: 2;
-  -webkit-box-orient: vertical;
 }
 
 .pokeballImage {
@@ -84,8 +81,63 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 0px 0px 5px 5px;
 }
 
 .quickViewButtonText {
   font-weight: 500;
+}
+
+@media screen and (max-width: 1400px) {
+  .pokemonCardContainer {
+    width: 23%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .pokemonCardContainer {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .pokemonCardContainer {
+    width: 40%;
+  }
+  .pokemonCardsContainer {
+    justify-content: space-evenly;
+  }
+  .pokemonName {
+    font-size: 20px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pokemonCardContainer {
+    width: 30%;
+    height: 30vh;
+    margin: 11vh 1% 0vh 1%;
+  }
+  .pokemonName {
+    font-size: 15px !important;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .pokemonCardContainer {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .pokemonCardContainer {
+    width: 46%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .pokemonCardContainer {
+    width: 70%;
+  }
 }

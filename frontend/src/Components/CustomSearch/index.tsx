@@ -59,9 +59,11 @@ const CustomSearch = ({
       )}
       <input
         type="text"
-        className="searchInput"
+        className={
+          userHasSearchedSomething ? "searchInput-with-content" : "searchInput"
+        }
         onChange={(event) => onChangeText(event.target.value)}
-        placeholder="Search Pokemons"
+        placeholder="Search Pokemons!"
         onKeyDown={(e) => onKeyPress(e)}
         value={textSearched}
       />
