@@ -155,7 +155,7 @@ const HomeScreen = () => {
                 className="noPokemonsFoundImage"
               />
               <h3 className="noPokemonsFoundMessageTitle">
-                Sorry! No result found :(
+                Sorry! No result found...
               </h3>
               <p className="noPokemonsFoundMessage">
                 We couldn't found any pokemon that matches your current search.
@@ -171,6 +171,7 @@ const HomeScreen = () => {
             );
           })}
         </div>
+
         {canLoadMorePokemons && (
           <div className="loadMorePokemonsButton" onClick={loadMorePokemons}>
             {loadingMorePokemons ? (

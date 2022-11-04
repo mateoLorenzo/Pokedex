@@ -20,6 +20,7 @@
   justify-content: space-between;
   width: 80px;
   cursor: pointer;
+  z-index: 2;
 }
 
 .detailScreenContentContainer {
@@ -28,8 +29,8 @@
 }
 
 .detailScreenLeftCardContainer {
-  width: 27%;
-  border-radius: 30px;
+  width: 28%;
+  border-radius: 20px;
   background: linear-gradient(
     97.35deg,
     rgba(255, 255, 255, 0.06) 17.74%,
@@ -47,15 +48,18 @@
   background-size: contain;
   background-repeat: no-repeat;
   width: 95%;
-  margin-top: 2%;
-  height: 50%;
+  margin-top: 6%;
+  height: 45%;
   background-position: center;
 }
 
 .pokemonDetailName {
   font-weight: 700;
-  font-size: 50px;
+  font-size: 3.1rem;
   width: 80%;
+  line-height: 30px;
+  word-break: break-all;
+  margin-top: 5px;
 }
 
 .leftBlockDetailsContainer {
@@ -63,8 +67,9 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   align-items: center;
+  padding-bottom: 5vh;
 }
 
 .leftBlockFirstPokemonDetails {
@@ -74,34 +79,9 @@
   align-items: flex-start;
 }
 
-.pokemonDetail-id {
-  font-weight: 400;
-  font-size: 25px;
-}
-
-.pokemonDetail-description {
-  font-weight: 500;
-  font-size: 25px;
-}
-
-.leftBlockDivisorLine {
+.leftBlock-pokemonId {
   width: 100%;
-  height: 10px;
-  background-color: rgba(255, 255, 255, 0.06);
-  border-radius: 10px;
-}
-
-.leftBlock-PokemonTypesContainer {
-  width: 105%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.leftBlock-pokemonType {
-  width: 45%;
-  margin: 2.5% 2.5%;
-  height: 50px;
+  height: 30px;
   background: linear-gradient(
     97.35deg,
     rgba(255, 255, 255, 0.06) 17.74%,
@@ -109,7 +89,44 @@
   );
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(40px);
-  border-radius: 30px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.pokemonDetail-id {
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.pokemonDetail-description {
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-left: 10%;
+  margin-top: 5px;
+}
+
+.leftBlock-PokemonTypesContainer {
+  width: calc(100% + 5px);
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftBlock-pokemonType {
+  flex: 1;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+  height: 30px;
+  background: linear-gradient(
+    97.35deg,
+    rgba(255, 255, 255, 0.06) 17.74%,
+    rgba(255, 255, 255, 0.041) 87.41%
+  );
+  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(40px);
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,13 +134,13 @@
 
 .pokemonDetail-PokemonTypeText {
   color: white;
-  font-size: 20px;
+  font-size: 0.8rem;
   font-weight: 400;
 }
 
 .detailScreenRightCardContainer {
   flex: 1;
-  margin-left: 3%;
+  margin-left: 2%;
   background: linear-gradient(
     97.35deg,
     rgba(255, 255, 255, 0.06) 17.74%,
@@ -131,20 +148,36 @@
   );
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(40px);
-  border-radius: 30px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
+.detailScreenRightCardSubContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 11vh 0;
+}
+
 .pokemonDetailTransparentPokeball {
-  height: 90%;
   position: absolute;
+  height: calc(100% - 22vh);
 }
 
 .pokemonPropertyBlockContainer {
-  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemonPropertyBlockSubContainer {
   width: 80%;
   display: flex;
   justify-content: space-between;
@@ -152,35 +185,209 @@
 }
 
 .propertyDivisor {
-  width: 90%;
+  width: 80%;
   height: 10px;
   background-color: rgba(255, 255, 255, 0.06);
   border-radius: 50px;
 }
 
 .pokemonDetailProperty {
-  font-size: 30px;
+  font-size: 1.5rem;
   font-weight: 700;
+  margin-bottom: 5px;
 }
 
 .pokemonDetailValue {
-  font-size: 25px;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
 @media screen and (max-width: 1800px) {
-  .pokemonName {
-    font-size: 25px;
+  .pokemonDetailName {
+    font-size: 2rem;
   }
   .pokemonDetail-id {
     font-weight: 400;
-    font-size: 20px;
   }
   .pokemonDetail-description {
     font-weight: 500;
-    font-size: 20px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .detailScreenSubContainer {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .detailScreenSubContainer {
+    width: 83%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .detailScreenLeftCardContainer {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .detailScreenLeftCardContainer {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .pokemonDetailProperty {
+    font-size: 1.2rem !important;
+  }
+  .pokemonDetailValue {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .pokemonDetailImage {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .pokemonDetail-PokemonTypeText {
+    font-size: 0.8rem;
+  }
+  .pokemonDetail-id {
+    font-size: 0.8rem;
+  }
+  .pokemonDetail-description {
+    font-size: 0.8rem;
+  }
+  .detailScreenSubContainer {
+    justify-content: flex-start;
+  }
+  .detailScreenContentContainer {
+    margin-top: 5%;
+    height: 80%;
+  }
+  .leftBlockDetailsContainer {
+    margin-top: 5%;
+    padding-bottom: 4vh;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .detailScreenSubContainer {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .only-for-desktop {
+    display: none;
+  }
+  .detailScreenMainContainer {
+    height: auto;
+  }
+  .pokemonDetail-id {
+    font-size: 0.8rem;
+    display: flex;
+  }
+  .pokemonDetailImage {
+    width: 70%;
+    height: 200px;
   }
   .pokemonDetailName {
-    font-size: 40px;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .leftBlock-PokemonTypesContainer {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .leftBlock-pokemonType {
+    width: 30%;
+    border-radius: 5px;
+  }
+  .detailScreenContentContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .detailScreenLeftCardContainer {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 3vh;
+    padding-bottom: 1vh;
+  }
+  .detailScreenSubContainer {
+    width: 70%;
+    height: auto;
+    margin: 5vh 0 10vh 0;
+  }
+  .detailScreenRightCardContainer {
+    margin-left: 0;
+    width: 100%;
+    padding-top: 5vh;
+    border-radius: 15px;
+  }
+  .leftBlockFirstPokemonDetails {
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .pokemonDetailTransparentPokeball {
+    height: 75%;
+    width: 75%;
+  }
+  .propertyDivisor {
+    height: 8px;
+    margin-bottom: 4vh;
+    width: 80%;
+  }
+  .pokemonPropertyBlockSubContainer {
+    width: 80%;
+    margin-bottom: 5px;
+  }
+  .leftBlockDetailsContainer {
+    margin-top: 20px;
+    width: 65%;
+    padding-bottom: 2vh;
+  }
+  .pokemonDetail-description {
+    font-size: 1.2rem;
+    margin-left: 0;
+  }
+  .detailScreenRightCardSubContainer {
+    margin: 2vh 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pokemonDetailImage {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .pokemonDetailName {
+    font-size: 2rem;
+  }
+  .pokemonDetail-description {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .pokemonDetailImage {
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .pokemonDetailProperty {
+    font-size: 1.1rem !important;
+  }
+  .pokemonDetailValue {
+    font-size: 1.1rem !important;
   }
 }

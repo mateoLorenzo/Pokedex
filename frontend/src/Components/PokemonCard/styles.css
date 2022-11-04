@@ -1,6 +1,6 @@
 .pokemonCardContainer {
   width: 300px;
-  height: 40vh;
+  height: 38vh;
   margin: 12vh 1% 5vh 1%;
   display: flex;
   flex-direction: column;
@@ -62,9 +62,9 @@
   text-align: center;
   font-weight: 500;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 1.5rem;
   width: 65%;
-
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -86,11 +86,12 @@
 
 .quickViewButtonText {
   font-weight: 500;
+  font-size: 1rem;
 }
 
 @media screen and (max-width: 1400px) {
   .pokemonCardContainer {
-    width: 23%;
+    width: 22%;
   }
 }
 
@@ -102,31 +103,70 @@
 
 @media screen and (max-width: 800px) {
   .pokemonCardContainer {
-    width: 40%;
+    height: 30vh;
+    margin: 9vh 1vw 5vh 1vw;
+  }
+  .pokemonCardImage {
+    width: 65%;
   }
   .pokemonCardsContainer {
-    justify-content: space-evenly;
+    justify-content: center;
+    padding-top: 5vh;
   }
   .pokemonName {
-    font-size: 20px !important;
+    font-size: 1.2rem;
+  }
+  .pokemonCardImage {
+    top: -90px;
+  }
+  .pokeballImage {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .pokemonCardImage {
+    width: 70%;
+    top: -80px;
+  }
+  .pokemonName {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .pokemonCardImage {
+    top: -75px;
   }
 }
 
 @media screen and (max-width: 600px) {
+  .pokemonCardsContainer {
+    padding-top: 0;
+  }
   .pokemonCardContainer {
     width: 30%;
     height: 30vh;
-    margin: 11vh 1% 0vh 1%;
+    margin: 12vh 1% 0vh 1%;
   }
   .pokemonName {
-    font-size: 15px !important;
-    font-weight: 500;
+    font-size: 1rem !important;
+    font-weight: 600;
+  }
+  .pokeballImage {
+    width: 20px;
+    height: 20px;
+  }
+  .quickViewButtonText {
+    font-size: 0.7rem;
   }
 }
 
 @media screen and (max-width: 550px) {
   .pokemonCardContainer {
     width: 40%;
+    margin-top: 5vh;
   }
 }
 
@@ -139,5 +179,8 @@
 @media screen and (max-width: 350px) {
   .pokemonCardContainer {
     width: 70%;
+  }
+  .pokemonCardImage {
+    width: 60%;
   }
 }

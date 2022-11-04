@@ -4,6 +4,7 @@
   font-family: "poppins", monospace, Courier;
   font-weight: 300;
   color: #ffffff;
+  font-size: 16px;
 }
 
 .appScreenContainer {
@@ -11,7 +12,12 @@
   width: 100vw;
   background-size: cover;
   background-repeat: no-repeat;
-  position: absolute;
+  position: fixed;
+}
+
+.appScreenSubContainer {
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 ::-webkit-scrollbar {

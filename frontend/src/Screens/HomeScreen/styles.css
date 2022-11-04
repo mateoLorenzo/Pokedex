@@ -7,9 +7,10 @@
 
 .mainScreenLoaderContainer {
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  flex: 1;
   background-color: rgba(0, 0, 0, 0.452);
-  position: absolute;
+  position: fixed;
   z-index: 4;
   display: flex;
   justify-content: center;
@@ -47,7 +48,8 @@
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
-  margin-bottom: 5vh;
+  margin-bottom: 2vh;
+  z-index: 2;
 }
 
 .noPokemonsFoundMessageContainer {
@@ -58,7 +60,7 @@
 }
 
 .noPokemonsFoundMessageSubContainer {
-  width: 45vw;
+  width: 620px;
   height: 50vh;
   border-radius: 30px;
   background: linear-gradient(
@@ -72,6 +74,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .noPokemonsFoundImage {
@@ -80,17 +83,21 @@
 
 .noPokemonsFoundMessageTitle {
   font-weight: 600;
-  font-size: 30px;
+  font-size: 2rem;
   margin-top: 20px;
   margin-bottom: 15px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .noPokemonsFoundMessage {
   color: #a9a9a9;
-  font-size: 18px;
+  font-size: 1.4rem;
   text-align: center;
   line-height: 12px;
   margin-bottom: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .pokemonCardsContainer {
@@ -114,11 +121,11 @@
 }
 
 .loadMorePokemonsButton:hover {
-  width: 170px;
+  width: 155px;
 }
 
 .loadMorePokemonsButtonText {
-  font-size: 14px;
+  font-size: 0.8rem;
   font-weight: 500;
   height: 30px;
   display: flex;
@@ -137,11 +144,13 @@
 }
 
 .spinner {
-  border: 7.5px solid #f3f3f3;
-  border-top: 7.5px solid black;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid black;
+  margin-top: 5px;
+  margin-bottom: 5px;
   border-radius: 50%;
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 0.35s linear infinite;
 }
@@ -168,10 +177,10 @@
 
 @media screen and (max-width: 1800px) {
   .noPokemonsFoundMessageTitle {
-    font-size: 20px;
+    font-size: 1.2rem;
   }
   .noPokemonsFoundMessage {
-    font-size: 15px;
+    font-size: 0.8rem;
   }
 }
 
@@ -187,5 +196,32 @@
 @media screen and (max-width: 800px) {
   .pokemonLogo {
     left: auto;
+  }
+  .noPokemonsFoundMessageSubContainer {
+    width: 70vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .noPokemonsFoundImage {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .noPokemonsFoundImage {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .noPokemonsFoundMessageSubContainer {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .noPokemonsFoundMessageSubContainer {
+    width: 90vw;
   }
 }

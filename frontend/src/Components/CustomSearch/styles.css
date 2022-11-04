@@ -1,7 +1,8 @@
 .searchInputContainer {
-  width: 35vw;
+  width: 620px;
   height: 50px;
   display: flex;
+  z-index: 2;
 }
 
 .searchInput {
@@ -11,8 +12,8 @@
   border: 0px;
   height: 100%;
   width: 88%;
-  font-size: 15px;
-  padding-left: 30px;
+  font-size: 1rem;
+  padding-left: 2rem;
   transition: all 0.2s ease;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -25,7 +26,7 @@
   border: 0px;
   height: 100%;
   width: 88%;
-  font-size: 20px;
+  font-size: 1rem;
   padding-left: 50px;
   transition: all 0.2s ease;
 }
@@ -49,7 +50,7 @@
 }
 
 .searchButton {
-  width: 80px;
+  width: 65px;
   height: 100%;
   background-color: #469ef1;
   border-radius: 0px 15px 15px 0px;
@@ -75,8 +76,8 @@
 }
 
 .searchIcon {
-  height: 26px;
-  width: 26px;
+  height: 22px;
+  width: 22px;
 }
 
 .searchSpinner {
@@ -119,19 +120,19 @@ button:active {
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
   .searchInputContainer {
-    width: 45vw;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .searchInputContainer {
-    width: 60vw;
+    width: 70vw;
   }
 }
 
 @media screen and (max-width: 500px) {
+  .searchInputContainer {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 350px) {
   .searchInputContainer {
     width: 90vw;
   }

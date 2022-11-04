@@ -19,6 +19,13 @@ const PokemonDetailScreen = () => {
   const actualPage: any = useLocation();
   const history = useHistory();
 
+  const screenWidth =
+    window.innerWidth ||
+    document.documentElement.clientWidth ||
+    document.body.clientWidth;
+
+  console.log(screenWidth);
+
   useEffect(() => {
     (async () => {
       try {
@@ -85,95 +92,118 @@ const PokemonDetailScreen = () => {
   };
 
   return (
-    <div className="detailScreenMainContainer">
+    <>
       {loadingPokemonDetail && (
         <div className="mainScreenLoaderContainer">
           <div className="mainHomeLoader"></div>
         </div>
       )}
-      <div className="detailScreenSubContainer">
-        <div
-          className="goBackButtonContainer"
-          onClick={() => history.push("/")}
-        >
-          <HiOutlineArrowSmLeft size={30} />
-          <h3>Back</h3>
-        </div>
-        <div className="detailScreenContentContainer">
-          <div className="detailScreenLeftCardContainer">
-            <div
-              style={{
-                backgroundImage: `url(${
-                  selectedPokemonQuickView?.image
-                    ? selectedPokemonQuickView?.image
-                    : questionMark
-                })`,
-              }}
-              className="pokemonDetailImage"
-            />
-            <h1
-              className="pokemonDetailName"
-              data-testid="detail-screen-pokemon-name"
-            >
-              {selectedPokemonQuickView?.name}{" "}
-            </h1>
-            <div className="leftBlockDetailsContainer">
+      <div className="detailScreenMainContainer">
+        <div className="detailScreenSubContainer">
+          <div
+            className="goBackButtonContainer"
+            onClick={() => history.push("/")}
+          >
+            <HiOutlineArrowSmLeft size={30} />
+            <h3>Back</h3>
+          </div>
+          <div className="detailScreenContentContainer">
+            <div className="detailScreenLeftCardContainer">
+              <div
+                style={{
+                  backgroundImage: `url(${
+                    selectedPokemonQuickView?.image
+                      ? selectedPokemonQuickView?.image
+                      : questionMark
+                  })`,
+                }}
+                className="pokemonDetailImage"
+              />
+              <h1
+                className="pokemonDetailName"
+                data-testid="detail-screen-pokemon-name"
+              >
+                {selectedPokemonQuickView?.name}{" "}
+              </h1>
               <div className="leftBlockFirstPokemonDetails">
-                <p className="pokemonDetail-id">
-                  N.º{selectedPokemonQuickView?.id.toString().padStart(3, "0")}
-                </p>
                 <p className="pokemonDetail-description">
                   {selectedPokemon?.description}
                 </p>
               </div>
-              <div className="leftBlockDivisorLine"></div>
-              <div className="leftBlock-PokemonTypesContainer">
-                {selectedPokemonQuickView?.types.map((pokemonType, index) => {
-                  return (
-                    <div key={index} className="leftBlock-pokemonType">
-                      <p className="pokemonDetail-PokemonTypeText">
-                        {pokemonType}
-                      </p>
-                    </div>
-                  );
-                })}
+              <div className="leftBlockDetailsContainer">
+                <div className="leftBlock-pokemonId">
+                  <p className="pokemonDetail-id">
+                    N.º
+                    {selectedPokemonQuickView?.id.toString().padStart(3, "0")}
+                  </p>
+                </div>
+                <div className="leftBlock-PokemonTypesContainer">
+                  {selectedPokemonQuickView?.types.map((pokemonType, index) => {
+                    return (
+                      <div key={index} className="leftBlock-pokemonType">
+                        <p className="pokemonDetail-PokemonTypeText">
+                          {pokemonType}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
-          </div>
+            <div className="detailScreenRightCardContainer">
+              <div className="detailScreenRightCardSubContainer">
+                {/* <div style={{ width: 100, height: 100, background: "blue" }} /> */}
+                {/* <div css={testStyle} /> */}
+                <img
+                  src={transparentPokeball}
+                  alt="transparent-pokeball"
+                  className="pokemonDetailTransparentPokeball"
+                />
+                <div className="pokemonPropertyBlockContainer">
+                  <div className="pokemonPropertyBlockSubContainer">
+                    <p className="pokemonDetailProperty">Height</p>
+                    <p className="pokemonDetailValue">
+                      {selectedPokemon?.height.toFixed(2)}
+                    </p>
+                  </div>
+                  <div className="propertyDivisor"></div>
+                </div>
 
-          <div className="detailScreenRightCardContainer">
-            <img
-              src={transparentPokeball}
-              alt="transparent-pokeball"
-              className="pokemonDetailTransparentPokeball"
-            />
-            <div className="pokemonPropertyBlockContainer">
-              <p className="pokemonDetailProperty">Height</p>
-              <p className="pokemonDetailValue">
-                {selectedPokemon?.height.toFixed(2)}
-              </p>
-            </div>
-            <div className="propertyDivisor"></div>
-            <div className="pokemonPropertyBlockContainer">
-              <p className="pokemonDetailProperty">Weight</p>
-              <p className="pokemonDetailValue">
-                {selectedPokemon?.weight.toFixed(2)}
-              </p>
-            </div>
-            <div className="propertyDivisor"></div>
-            <div className="pokemonPropertyBlockContainer">
-              <p className="pokemonDetailProperty">Gender</p>
-              <p className="pokemonDetailValue">{selectedPokemon?.gender}</p>
-            </div>
-            <div className="propertyDivisor"></div>
-            <div className="pokemonPropertyBlockContainer">
-              <p className="pokemonDetailProperty">Habitat</p>
-              <p className="pokemonDetailValue">{selectedPokemon?.habitat}</p>
+                <div className="pokemonPropertyBlockContainer">
+                  <div className="pokemonPropertyBlockSubContainer">
+                    <p className="pokemonDetailProperty">Weight</p>
+                    <p className="pokemonDetailValue">
+                      {selectedPokemon?.weight.toFixed(2)}
+                    </p>
+                  </div>
+                  <div className="propertyDivisor"></div>
+                </div>
+
+                <div className="pokemonPropertyBlockContainer">
+                  <div className="pokemonPropertyBlockSubContainer">
+                    <p className="pokemonDetailProperty">Gender</p>
+                    <p className="pokemonDetailValue">
+                      {selectedPokemon?.gender}
+                    </p>
+                  </div>
+                  <div className="propertyDivisor"></div>
+                </div>
+
+                <div className="pokemonPropertyBlockContainer">
+                  <div className="pokemonPropertyBlockSubContainer">
+                    <p className="pokemonDetailProperty">Habitat</p>
+                    <p className="pokemonDetailValue">
+                      {selectedPokemon?.habitat}
+                    </p>
+                  </div>
+                  <div className="propertyDivisor"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

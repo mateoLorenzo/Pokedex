@@ -9,6 +9,10 @@ ReactDOM.render(
     <div
       className="appScreenContainer"
       style={{ backgroundImage: `url(${homeBackground})` }}
+    />
+    <div
+      className="appScreenSubContainer"
+      // style={{ backgroundImage: `url(${homeBackground})` }}
     >
       <App />
     </div>
