@@ -51,7 +51,7 @@ npm run dev
 
 #### Possible issue
 
-If can't run the app, make sure to be running an updated version of node. Can updated via nvm running:
+If can't run the app, make sure to be running an updated version of node. Can update it via nvm running:
 
 ```
 nvm use
